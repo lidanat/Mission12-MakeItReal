@@ -2,8 +2,6 @@
 
 # Project Title
 
-[Optional: Add an image or a gif representing your project]
-
 Mission 12 with a personal Portfolio as a final activity in the bootcamp.
 
 ## Table of Contents
