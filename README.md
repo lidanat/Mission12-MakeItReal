@@ -34,6 +34,7 @@ Navigate trhough the page and clikc on the different links to see how the styles
 ## Contributing
 
 I used a similar format portfolio from a youtube tutorial, step by step: https://www.youtube.com/watch?v=0YFrGy_mzjY
+I used a script for a public repository to connect the form with a google sheet: https://github.com/jamiewilson/form-to-google-sheets
 
 ## Contact
 

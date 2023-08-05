@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="Images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>QA Automation Engineer</p>
@@ -37,14 +39,10 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                        It has survived not only five centuries, but also the leap into electronic typesetting,
-                        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                        sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
+                    <p>I am passionate about software quality, I like to apply all the good practices 
+                        of the ISTQB to the projects in which I have the opportunity to do so, 
+                        I am currently the Leader of a test automation project, 
+                        I also like to learn and now I am trying to improve my technical skills in javascript</p>
 
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -69,7 +67,7 @@
                         <ul>
                             <li><span>2023</span><br>JavaScript Bootcamp - Make-it-real</li>
                             <li><span>2020</span><br>Selenium - JAVA Bootcamp - Globant</li>
-                            <li><span>2011</span><br>Software Engineer</li>
+                            <li><span>2011</span><br>Software Engineer - Universidad Tecnológica de Pereira</li>
                         </ul>
                     </div>
                 </div>
@@ -85,28 +83,22 @@
                 <div>
                     <i class="fa-solid fa-bug"></i>
                     <h2>Manual Tester</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolorem dolor assumenda
-                        distinctio,
-                        nam cum excepturi impedit ratione maxime illo quisquam voluptates incidunt laborum perspiciatis
-                        non soluta veniam beatae.</p>
+                    <p>In charge of designing software tests and validating that the requirements are met according to what the client expects</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-code"></i>
                     <h2>Automation Tester</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolorem dolor assumenda
-                        distinctio,
-                        nam cum excepturi impedit ratione maxime illo quisquam voluptates incidunt laborum perspiciatis
-                        non soluta veniam beatae.</p>
+                    <p>In charge of designing automated tests, executing automated test cases in javascript and maintaining existing test cases, 
+                        validating the execution of tests in the pipeline and generating reports to show stakeholders</p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
                     <i class="fa-regular fa-code"></i>
                     <h2>QA Lead</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa ab dolorem dolor assumenda
-                        distinctio,
-                        nam cum excepturi impedit ratione maxime illo quisquam voluptates incidunt laborum perspiciatis
-                        non soluta veniam beatae.</p>
+                    <p>In charge of designing the test plan and test strategy for the manual testing and automated testing team, 
+                        supporting both teams and solving problems in case they occur, 
+                        communicating problems to the customer and being in communication with the team.</p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
@@ -121,24 +113,24 @@
                 <div class="work">
                     <img src="Images/work1-leadership">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app Connects you to the talented people around the world</p>
+                        <h3>Make It Real Bootcamp</h3>
+                        <p>The last training made to improve my technical skills</p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="Images/work2-Testing">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app Connects you to the talented people around the world</p>
+                        <h3>Mission 11</h3>
+                        <p>To learn about media Queries</p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
                 <div class="work">
                     <img src="Images/work3-automation">
                     <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app Connects you to the talented people around the world</p>
+                        <h3>HTML and CSS</h3>
+                        <p>Improving my knowledge about these languages</p>
                         <a href="#"><i class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
@@ -164,12 +156,13 @@
                     <a href="Images/pdf-example.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -193,6 +186,36 @@
             document.getElementById(tabname).classList.add("active-tab")
         }
     </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwoI7QGZYkGSlGHs2BPBmsaRGOBsA35Zh1-oYN8CknFkNbzNi_e_5Q2nFA15w-7Vcm43g/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document-getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+            msg.innerHTML = "The information was sent"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
